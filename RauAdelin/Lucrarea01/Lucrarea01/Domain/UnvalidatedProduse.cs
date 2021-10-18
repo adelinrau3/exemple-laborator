@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 
 namespace Lucrarea01_RauAdelin
 {
-    public record UnvalidatedProduse(string ProdusID, string ProdusCantitate);
+    public record UnvalidatedProduse(string ProdusID, string ProdusCantitate); 
 
 }

@@ -8,3 +8,4 @@ namespace Lucrarea01_RauAdelin.Domain
 {
     public record ValidatedProduse(ProdusID ProdusID, ProdusCantitate ProdusCantitate);
 }
+ 

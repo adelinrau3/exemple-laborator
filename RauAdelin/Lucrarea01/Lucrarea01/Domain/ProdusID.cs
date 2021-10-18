@@ -9,7 +9,7 @@ namespace Lucrarea01_RauAdelin.Domain
 {
     public record ProdusID
     {
-        private static readonly Regex ValidPattern = new("^LM[0-9]{5}$");
+        private static readonly Regex ValidPattern = new("");
 
         public string Value { get; }
 
@@ -21,7 +21,7 @@ namespace Lucrarea01_RauAdelin.Domain
             }
             else
             {
-                throw new InvalidProdusID("WRONG INPUT");
+                throw new InvalidProdusID("ProdInvalid");
             }
         }
 

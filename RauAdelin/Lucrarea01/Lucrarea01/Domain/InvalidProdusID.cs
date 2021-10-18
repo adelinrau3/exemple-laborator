@@ -10,7 +10,7 @@ namespace Lucrarea01_RauAdelin.Domain
         {
         }
 
-        public InvalidProdusID(string message) : base(message)
+        public InvalidProdusID(string message) : base(message) 
         {
         }
 

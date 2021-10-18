@@ -8,4 +8,4 @@ using System.Threading.Tasks;
 namespace Lucrarea01_RauAdelin
 {
     public record PaymentDetails(string PaymentAddress, int PaymentState) { }
-}
+} 

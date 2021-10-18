@@ -30,7 +30,7 @@ namespace L01
                 if (RequestPayment())
                 {
                     PayCart(cart);
-                    Console.WriteLine($"Good day");
+                    Console.WriteLine($"Thanks");
                     break;
                 }
             }
@@ -43,7 +43,7 @@ namespace L01
                 .OrderBy(a => a.Product.Id)
                 .Select(a => $"\t{a.Product.Id} / {a.Product.Name} / {a.Product.Price} / {a.Quantity}" + Environment.NewLine)
                 .Aggregate((a, b) => a + b));
-            Console.Write("Total price: ");
+            Console.Write("Total to pay: ");
             Console.WriteLine(cart.Items.Select(a => a.Product.Price * a.Quantity).Aggregate((a, b) => a + b));
             Console.WriteLine();
             return Unit.Default;
@@ -51,7 +51,7 @@ namespace L01
 
         public static string RequestCredentials()
         {
-            Console.Write("Please enter password: ");
+            Console.Write("Enter password: ");
             return Console.ReadLine();
         }
 
@@ -59,21 +59,22 @@ namespace L01
         {
             var products = DataBase.LoadProducts();
             products.Iter(a => Console.WriteLine($"Id: {a.Id}, Price: {a.Price}, Name: {a.Name}"));
-            Console.WriteLine("Please select an item by it's Id and then input the quantity");
+            Console.WriteLine("Select an item Id and then input the quantity");
             Console.Write("Product Id: ");
             var productId = Console.ReadLine().Trim();
             Console.Write("Quantity: ");
-            var quantity = int.Parse(Console.ReadLine().Trim()); // n-am chef sa fac validare
+            var quantity = int.Parse(Console.ReadLine().Trim());
             var product = products.FirstOrDefault(a => a.Id.ToString() == productId);
             return (product, quantity);
         }
 
         public static bool RequestPayment()
         {
-            Console.WriteLine("Please insert \"Y\" if you want to pay or anything else to continue shopping:");
+            Console.WriteLine("Please insert \"y\" if you want to pay:");
             return Console.ReadLine().Trim().ToLower() switch
             {
                 "y" => true,
+                "Y" => true,
                 _ => false
             };
         }

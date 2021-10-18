@@ -19,7 +19,7 @@ namespace Lucrarea01_RauAdelin.Domain
                 Value = value;
             }
             else
-            {
+            { 
                 throw new InvalidProdusCantitate("WRONG INPUT");
             }
         }

@@ -9,7 +9,7 @@ namespace Lucrarea01_RauAdelin.Domain
         public InvalidProdusCantitate()
         {
         }
-
+         
         public InvalidProdusCantitate(string message) : base(message)
         {
         }

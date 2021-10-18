@@ -34,7 +34,7 @@ namespace L01.Domain
         }
 
         public static ICartState PayCart(Cart cart)
-            => new PaidCart(); // Nu prea am chestii de facut in situatia asta
+            => new PaidCart(); 
 
         
     }

@@ -11,7 +11,7 @@ namespace Lucrarea01_RauAdelin
         static void Main(string[] args)
         {
 
-            string answer = ReadValue("Incepeti Cumparaturile?[Y/N]");
+            string answer = ReadValue("Incepeti cumparaturile?");
             if (answer.Contains("Y"))
             {
                 var listOfProduse = ReadProduse().ToArray();
@@ -49,7 +49,7 @@ namespace Lucrarea01_RauAdelin
             object answer = null;
             do
             {
-                answer = ReadValue("adaugati produs?[Y/N]: ");
+                answer = ReadValue("adaugati produs? : ");
 
                 if (answer.Equals("Y"))
                 {
@@ -79,7 +79,7 @@ namespace Lucrarea01_RauAdelin
             PaymentAddress paymentAddress;
             CosDetails cosDetails;
 
-            string answer = ReadValue("Finalizezi Comanda?[Y/N]");
+            string answer = ReadValue("Finalizezi Comanda? ");
 
             if (answer.Contains("Y"))
             {
@@ -93,7 +93,7 @@ namespace Lucrarea01_RauAdelin
                 {
                     paymentAddress = new PaymentAddress(Address);
                 }
-                var payment = ReadValue("Platesti?[Y/N] ");
+                var payment = ReadValue("Platesti?  ");
                 if (payment.Contains("Y"))
                 {
                     paymentState = new PaymentState(1);

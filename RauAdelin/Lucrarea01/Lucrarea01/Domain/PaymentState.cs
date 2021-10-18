@@ -12,7 +12,7 @@ namespace Lucrarea01_RauAdelin.Domain
 
         public int Value { get; }
 
-        public PaymentState(int value)
+        public PaymentState(int value) 
         {
                 Value = value;
         }
