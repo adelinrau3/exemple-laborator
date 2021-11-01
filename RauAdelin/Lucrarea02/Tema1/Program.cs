@@ -74,7 +74,6 @@ namespace L01
             return Console.ReadLine().Trim().ToLower() switch
             {
                 "y" => true,
-                "Y" => true,
                 _ => false
             };
         }
